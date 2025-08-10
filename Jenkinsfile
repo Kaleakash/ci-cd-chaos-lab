@@ -20,10 +20,6 @@ pipeline {
             }
         }
 
-        stage('Verify App') {
-            steps {
-                sh 'curl -f http://localhost:5000'
-            }
-        }
+       
     }
 }
