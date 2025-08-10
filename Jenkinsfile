@@ -16,6 +16,7 @@ pipeline {
 
         stage('Deploy and Start Chaos') {
             steps {
+                sh 'docker-compose down'
                 sh 'docker-compose up -d'
             }
         }
