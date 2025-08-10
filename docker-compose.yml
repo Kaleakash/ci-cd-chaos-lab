@@ -10,7 +10,7 @@ services:
   pumba:
     image: gaiaadm/pumba:latest
     container_name: pumba
-    command: ["--interval", "60s", "kill", "--signal", "SIGTERM", "re2:^flask-app-chaos(_\\d+)?$"]
+    command: ["--interval", "30s", "kill", "--signal", "SIGTERM", "re2:^flask-app-chaos(_\\d+)?$"]
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: always
