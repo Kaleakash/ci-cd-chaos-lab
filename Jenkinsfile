@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/<your-username>/ci-cd-chaos-lab.git'
+                git branch: 'master', url: 'https://github.com/Kaleakash/ci-cd-chaos-lab.git'
             }
         }
 
