@@ -5,7 +5,7 @@ services:
     container_name: flask-app-chaos
     ports:
       - "5001:5000"
-    restart: always  # Auto-restart after chaos kills it
+    restart: always
 
   pumba:
     image: gaiaadm/pumba:latest
@@ -13,8 +13,4 @@ services:
     command: ["--interval", "30s", "kill", "--signal", "SIGKILL", "re2:^flask-app-chaos$"]
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    network_mode: host
     restart: always
-
-volumes:
-  jenkins_home:
